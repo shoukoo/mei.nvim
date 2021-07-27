@@ -1,4 +1,4 @@
-# 💮 mei.nvim
+# ![mei](mei.jpg) mei.nvim
 A beautiful colorscheme that is written in lua.
 
 ## Screenshot
