@@ -1,15 +1,20 @@
-# mei.nvim
-A vim colorscheme written in lua.
+# 💮 mei.nvim
+A beautiful colorscheme that is written in lua.
 
 ## Screenshot
 ![screenshot](screenshot.png)
 
 ## Quick Start
-1 Vim-plug
-```
+* Vim-plug
+```vim
 Plug "shoukoo/mei.nvim"
 ```
-1 Lua
-```
+* Packer
+You can add the following in your `init.lua`.
+```lua
+require("packer").startup(function()
+  use({"shoukoo/mei.nvim", branch="first-commit"})
+end)
+...
 require("shoukoo/mei.nvim")
 ```
