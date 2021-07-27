@@ -1,4 +1,15 @@
 # mei.nvim
-A neovim colorscheme written in lua.
+A vim colorscheme written in lua.
 
-![mei](mei.jpg)
+## Screenshot
+![screenshot](screenshot.png)
+
+## Quick Start
+1 Vim-plug
+```
+Plug "shoukoo/mei.nvim"
+```
+1 Lua
+```
+require("shoukoo/mei.nvim")
+```
