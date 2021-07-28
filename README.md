@@ -1,8 +1,7 @@
 # 梅 💮 mei.nvim
-A beautiful colorscheme that is written in lua. It works with or without Tree-sitter
+A beautiful colorscheme that is written in lua. It works with or without Tree-sitter.
 
 ## Screenshot
-
 With Tree-sitter
 ![treesitter](treesitter_on.png)
 
