@@ -11,21 +11,30 @@
 -- URL:          github.com/shoukoo/lua/mei.vim
 -- Author:       Andy Hsieh(shoukoo.koike@gmail.com)
 -- License:      MPL-2.0
+--
+-- Useful tips
+-- :h highlight-groups to look for the existing groups
+-- :so $VIMRUNTIME/syntax/hitest.vim
+
 
 local mei = {
 	bg = "#3a3a3a",
 	fg = "#ffebe5",
+  -- mainly for telescope
 	bg_popup = "#0b0b0b",
+  -- mainly for pmenu
+	bg_alt = "#73797e",
 
 	pink = "#f73a84",
 	light_pink = "#f85396",
 	lighter_pink = "#f96ba5",
 	white_pink = "#fb9dc3",
-	bg_alt = "#73797e",
+  pink_white = "#fdcee1",
 
 	green = "#b1d182",
 	brown = "#c78f70",
 	blue = "#7aa0c7",
+  light_blue = "#ada7ff",
 	dark_blue = "#34597e",
 	red = "#eb4034",
 	yellow = "#ffe841",
@@ -59,8 +68,9 @@ function mei.load_syntax()
 		Constant = { fg = mei.orange },
 		Character = { fg = mei.green },
 		NonText = { fg = mei.pink },
+
 		-- require() or pairs()
-		Identifier = { fg = mei.light_purple },
+		Identifier = { fg = mei.light_blue},
 		-- types int, long char
 		Type = { fg = mei.pink },
 
@@ -77,7 +87,8 @@ function mei.load_syntax()
 		-- case default
 		Label = { fg = mei.pink },
 		-- other keywords
-		Keyword = { fg = mei.lighter_pink },
+    --
+		Keyword = { fg = mei.yellow},
 		-- Search /<search keyword>
 		IncSearch = { fg = mei.bg, bg = mei.pink, style = mei.none },
 		Search = { fg = mei.bg, bg = mei.pink },
@@ -146,13 +157,13 @@ end
 function mei.load_plugin_syntax()
 	local plugin_syntax = {
 		-- Treesitter
-		TSFunction = { fg = mei.pink },
-		TSMethod = { fg = mei.pink },
-		TSKeywordFunction = { fg = mei.red },
-		TSProperty = { fg = mei.yellow },
-		TSType = { fg = mei.teal },
-		TSVariable = { fg = mei.blue },
-		TSPunctBracket = { fg = mei.pink },
+		TSFunction = { fg = mei.fg},
+    TSMethod = { fg = mei.fg},
+		TSKeywordFunction = { fg = mei.light_blue},
+		TSProperty = { fg = mei.fg},
+		TSType = { fg = mei.fg},
+		TSVariable = { fg = mei.fg},
+		TSPunctBracket = { fg = mei.light_pink},
 
 		-- LSP config
 		LspDiagnosticsSignError = { fg = mei.red },
