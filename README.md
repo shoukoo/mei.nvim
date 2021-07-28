@@ -7,7 +7,7 @@ With Tree-sitter
 ![treesitter](treesitter_on.png)
 
 Without Tree-sitter
-![treesitter](treesitter_on.png)
+![treesitter](treesitter_off.png)
 
 ## Quick Start
 * Vim-plug
