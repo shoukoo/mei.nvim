@@ -16,25 +16,23 @@
 -- :h highlight-groups to look for the existing groups
 -- :so $VIMRUNTIME/syntax/hitest.vim
 
-
 local mei = {
 	bg = "#3a3a3a",
 	fg = "#ffebe5",
-  -- mainly for telescope
+	-- mainly for telescope
 	bg_popup = "#0b0b0b",
-  -- mainly for pmenu
+	-- mainly for pmenu
 	bg_alt = "#73797e",
 
 	pink = "#f73a84",
 	light_pink = "#f85396",
 	lighter_pink = "#f96ba5",
 	white_pink = "#fb9dc3",
-  pink_white = "#fdcee1",
+	pink_white = "#fdcee1",
 
 	green = "#b1d182",
 	brown = "#c78f70",
 	blue = "#7aa0c7",
-  light_blue = "#ada7ff",
 	dark_blue = "#34597e",
 	red = "#eb4034",
 	yellow = "#ffe841",
@@ -70,7 +68,7 @@ function mei.load_syntax()
 		NonText = { fg = mei.pink },
 
 		-- require() or pairs()
-		Identifier = { fg = mei.light_blue},
+		Identifier = { fg = mei.fg },
 		-- types int, long char
 		Type = { fg = mei.pink },
 
@@ -87,8 +85,8 @@ function mei.load_syntax()
 		-- case default
 		Label = { fg = mei.pink },
 		-- other keywords
-    --
-		Keyword = { fg = mei.yellow},
+		--
+		Keyword = { fg = mei.yellow },
 		-- Search /<search keyword>
 		IncSearch = { fg = mei.bg, bg = mei.pink, style = mei.none },
 		Search = { fg = mei.bg, bg = mei.pink },
@@ -157,13 +155,13 @@ end
 function mei.load_plugin_syntax()
 	local plugin_syntax = {
 		-- Treesitter
-		TSFunction = { fg = mei.fg},
-    TSMethod = { fg = mei.fg},
+		TSFunction = { fg = mei.fg },
+		TSMethod = { fg = mei.fg },
 		TSKeywordFunction = { fg = mei.pink },
-		TSProperty = { fg = mei.fg},
-		TSType = { fg = mei.fg},
-		TSVariable = { fg = mei.fg},
-		TSPunctBracket = { fg = mei.light_pink},
+		TSProperty = { fg = mei.fg },
+		TSType = { fg = mei.fg },
+		TSVariable = { fg = mei.fg },
+		TSPunctBracket = { fg = mei.light_pink },
 
 		-- LSP config
 		LspDiagnosticsSignError = { fg = mei.red },
