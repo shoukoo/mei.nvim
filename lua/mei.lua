@@ -1,3 +1,17 @@
+-- ,---.    ,---.    .-''-.  .-./`)
+-- |    \  /    |  .'_ _   \ \ .-.')
+-- |  ,  \/  ,  | / ( ` )   '/ `-' \
+-- |  |\_   /|  |. (_ o _)  | `-'`"`
+-- |  _( )_/ |  ||  (_,_)___| .---.
+-- | (_ o _) |  |'  \   .---. |   |
+-- |  (_,_)  |  | \  `-'    / |   |
+-- |  |      |  |  \       /  |   |
+-- '--'      '--'   `'-..-'   '---'
+-- File:         mei.lua
+-- URL:          github.com/shoukoo/lua/mei.vim
+-- Author:       Andy Hsieh(shoukoo.koike@gmail.com)
+-- License:      MPL-2.0
+
 local mei = {
 	bg = "#3a3a3a",
 	fg = "#ffebe5",
@@ -6,37 +20,20 @@ local mei = {
 	pink = "#f73a84",
 	light_pink = "#f85396",
 	lighter_pink = "#f96ba5",
-	soft_pink = "#fa84b4",
 	white_pink = "#fb9dc3",
+	bg_alt = "#73797e",
 
-	dark_green = "#688f4e",
 	green = "#b1d182",
-	soft_green = "#b2cacc",
-	light_green = "#e4fbdb",
-
 	brown = "#c78f70",
-	light_brown = "#fff1d5",
-
 	blue = "#7aa0c7",
-	light_blue = "#9bb7d4",
 	dark_blue = "#34597e",
-
 	red = "#eb4034",
-	dark_red = "#d13429",
-
 	yellow = "#ffe841",
 	dark_yellow = "#ffc211",
-
 	light_orange = "#ffe577",
 	orange = "#ff8d00",
-
 	purple = "#ba4ddb",
 	light_purple = "#e06ee0",
-	dark_purple = "#4f176c",
-
-	black = "#000",
-
-	bg_alt = "#73797e",
 }
 
 function mei.highlight(group, color)
@@ -56,7 +53,7 @@ function mei.load_syntax()
 		VisualNOS = { bg = mei.white_pink },
 
 		String = { fg = mei.white_pink },
-		Number = { fg = mei.pink },
+		Number = { fg = mei.brown },
 		Float = { fg = mei.brown },
 		Boolean = { fg = mei.orange },
 		Constant = { fg = mei.orange },
@@ -101,7 +98,7 @@ function mei.load_syntax()
 		Cursor = { fg = mei.orange, bg = mei.none, style = "reverse" },
 		CursorLineNr = { fg = mei.pink, bg = mei.bg_alt },
 		-- diff
-		DiffAdd = { fg = mei.bg_alt, bg = mei.dark_green },
+		DiffAdd = { fg = mei.bg_alt, bg = mei.green },
 		DiffChange = { fg = mei.bg_alt, bg = mei.yellow },
 		DiffDelete = { fg = mei.bg_alt, bg = mei.red },
 		DiffText = { fg = mei.bg_alt, bg = mei.fg },
@@ -148,7 +145,7 @@ end
 
 function mei.load_plugin_syntax()
 	local plugin_syntax = {
-    -- Treesitter
+		-- Treesitter
 		TSFunction = { fg = mei.pink },
 		TSMethod = { fg = mei.pink },
 		TSKeywordFunction = { fg = mei.red },
@@ -174,7 +171,7 @@ function mei.load_plugin_syntax()
 		LspDiagnosticsUnderlineHint = { style = "undercurl", sp = mei.purple },
 
 		-- Telescope
-		TelescopeBorder = { fg = mei.soft_pink },
+		TelescopeBorder = { fg = mei.white_pink },
 		TelescopePromptBorder = { fg = mei.pink },
 		TelescopeMatching = { fg = mei.pink },
 		TelescopeSelection = { fg = mei.yellow, bg = mei.bg_popup, style = "bold" },
