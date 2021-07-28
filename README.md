@@ -1,5 +1,5 @@
 # 梅 💮 mei.nvim
-A beautiful colorscheme that is written in lua. It works with or without Tree-sitter.
+A beautiful color scheme that is written in lua. It works in both vim and neovim.
 
 ## Screenshot
 With Tree-sitter
