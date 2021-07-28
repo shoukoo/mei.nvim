@@ -159,7 +159,7 @@ function mei.load_plugin_syntax()
 		-- Treesitter
 		TSFunction = { fg = mei.fg},
     TSMethod = { fg = mei.fg},
-		TSKeywordFunction = { fg = mei.light_blue},
+		TSKeywordFunction = { fg = mei.pink },
 		TSProperty = { fg = mei.fg},
 		TSType = { fg = mei.fg},
 		TSVariable = { fg = mei.fg},
