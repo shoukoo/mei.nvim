@@ -179,6 +179,11 @@ function mei.load_plugin_syntax()
 		LspDiagnosticsUnderlineInformation = { style = "undercurl", sp = mei.blue },
 		LspDiagnosticsUnderlineHint = { style = "undercurl", sp = mei.purple },
 
+    -- Orgmode
+    OrgAgendaDay = { fg = mei.fg },
+    OrgDONE = { fg = mei.green },
+    OrgTODO = { fg =  mei.pink },
+
 		-- Telescope
 		TelescopeBorder = { fg = mei.white_pink },
 		TelescopePromptBorder = { fg = mei.pink },
