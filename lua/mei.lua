@@ -24,15 +24,20 @@ local mei = {
 	-- mainly for pmenu
 	bg_alt = "#73797e",
 
+	keyword_color = "#fb9dc3",
+
 	pink = "#f73a84",
-	light_pink = "#f85396",
-	lighter_pink = "#f96ba5",
+	light_pink = "#f96ba5",
+	light_pink2 = "#fa85b4",
 	white_pink = "#fb9dc3",
 	pink_white = "#fdcee1",
+	dark_pink = "#c64378",
 
-	green = "#b1d182",
+	green = "#b4fa85",
+	light_green = "#66ffcc",
 	brown = "#c78f70",
 	blue = "#7aa0c7",
+	light_blue = "#65a0f8",
 	dark_blue = "#34597e",
 	red = "#eb4034",
 	yellow = "#ffe841",
@@ -40,7 +45,7 @@ local mei = {
 	light_orange = "#ffe577",
 	orange = "#ff8d00",
 	purple = "#ba4ddb",
-	light_purple = "#e06ee0",
+	light_purple = "#e999e9",
 }
 
 function mei.highlight(group, color)
@@ -59,15 +64,15 @@ function mei.load_syntax()
 		Visual = { fg = mei.bg, bg = mei.white_pink },
 		VisualNOS = { bg = mei.white_pink },
 
-		String = { fg = mei.white_pink },
-		Number = { fg = mei.brown },
-		Float = { fg = mei.brown },
-		Boolean = { fg = mei.orange },
-		Constant = { fg = mei.orange },
+		String = { fg = mei.light_blue },
+		Number = { fg = mei.green },
+		Float = { fg = mei.green },
+		Boolean = { fg = mei.light_green},
+		Constant = { fg = mei.light_purple},
 		Character = { fg = mei.green },
 		NonText = { fg = mei.pink },
 
-		-- require() or pairs()
+		-- require() or pairs() or variable names
 		Identifier = { fg = mei.fg },
 		-- types int, long char
 		Type = { fg = mei.pink },
@@ -79,25 +84,25 @@ function mei.load_syntax()
 		PreCondit = { fg = mei.pink },
 		PreProc = { fg = mei.pink },
 		-- general if statement
-		Conditional = { fg = mei.pink },
+		Conditional = { fg = mei.keyword_color},
 		---- while loop
-		Repeat = { fg = mei.pink },
+		Repeat = { fg = mei.keyword_color},
 		-- case default
-		Label = { fg = mei.pink },
+		Label = { fg = mei.keyword_color},
 		-- other keywords
 		--
-		Keyword = { fg = mei.yellow },
+		Keyword = { fg = mei.keyword_color},
 		-- Search /<search keyword>
 		IncSearch = { fg = mei.bg, bg = mei.pink, style = mei.none },
 		Search = { fg = mei.bg, bg = mei.pink },
 		-- comment
 		Comment = { fg = mei.dark_blue },
 		-- variables
-		Statement = { fg = mei.yellow },
+		Statement = { fg = mei.keyword_color},
 		-- function()
-		Function = { fg = mei.pink },
-		--Typedef = { fg = mei.red },
-		Operator = { fg = mei.light_orange },
+		Function = { fg = mei.keyword_color},
+		Typedef = { fg = mei.keyword_color},
+		Operator = { fg = mei.keyword_color},
 		-- try catch and throw
 		Exception = { fg = mei.pink },
 		Error = { fg = mei.red },
@@ -128,7 +133,7 @@ function mei.load_syntax()
 		-- set colorcolumn=<num>
 		ColorColumn = { bg = mei.bg_alt },
 		-- Match parameter
-		MatchParen = { fg = mei.light_pink, bg = mei.bg_alt },
+		MatchParen = { fg = mei.pink, bg = mei.bg_alt },
 		Whitespace = { fg = mei.bg_alt },
 		Question = { fg = mei.yellow },
 		NormalFloat = { fg = mei.purple, bg = mei.bg_popup },
@@ -155,13 +160,13 @@ end
 function mei.load_plugin_syntax()
 	local plugin_syntax = {
 		-- Treesitter
-		TSFunction = { fg = mei.fg },
-		TSMethod = { fg = mei.fg },
-		TSKeywordFunction = { fg = mei.pink },
-		TSProperty = { fg = mei.fg },
-		TSType = { fg = mei.fg },
+		TSFunction = { fg = mei.pink },
+		TSMethod = { fg = mei.pink },
+		TSKeywordFunction = { fg = mei.keyword_color},
+		TSProperty = { fg = mei.yellow},
+		TSType = { fg = mei.yellow},
 		TSVariable = { fg = mei.fg },
-		TSPunctBracket = { fg = mei.light_pink },
+		TSPunctBracket = { fg = mei.fg },
 
 		-- LSP config
 		LspDiagnosticsSignError = { fg = mei.red },
