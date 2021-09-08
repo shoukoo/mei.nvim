@@ -2,24 +2,41 @@
 A beautiful color scheme that is written in lua. It works in both vim and neovim.
 
 ## Screenshot
-With Tree-sitter
-![treesitter](treesitter_on.png)
+![mei](mei.png)
 
-Without Tree-sitter
-![treesitter](treesitter_off.png)
+## Getting started 🏡
 
-## Quick Start
-* Vim-plug
-```vim
-Plug "shoukoo/mei.nvim"
-```
-* Packer
+### Requirements
+- Neovim 0.5+
 
-You can add the following in your `init.lua`.
+## Installation 💾
+Use your faviourie package manager to install mei.nvim
+
+#### Packer
+
 ```lua
-require("packer").startup(function()
-  use({"shoukoo/mei.nvim", branch="first-commit"})
-end)
-...
-require("shoukoo/mei.nvim")
+use 'shoukoo/mei.nvim'
 ```
+
+#### Vim-Plug
+```viml
+Plug 'shoukoo/mei.nvim'
+```
+
+## Setup
+
+### Vimscript
+```vim
+colorscheme mei
+```
+
+### Lua
+```lua
+require('mei')
+```
+
+## Supoorted Plugins
+- [TreeSitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [LSP Diagnostics](https://github.com/neovim/nvim-lspconfig)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [Orgmode](https://github.com/kristijanhusak/orgmode.nvim)
